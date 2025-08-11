@@ -1,28 +1,27 @@
-# micro-animations
-Micro-Animations Kit — Angular Library Plan  A lightweight Angular library focused on delightful, reusable micro-interactions and route/element animations. Built to be designer-friendly, developer-friendly, performant, and accessible.
+# MicroAnimationsWorkspace
 
-Micro-Animations Kit — Angular Library Plan
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
-A lightweight Angular library focused on delightful, reusable micro-interactions and route/element animations. Built to be designer-friendly, developer-friendly, performant, and accessible.
+## Development server
 
-Goals
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Provide tiny, tasteful animations for common UI patterns (buttons, list items, cards, inputs, toasts, route transitions).
+## Code scaffolding
 
-Offer a directive-first API for easy adoption (decorate elements with attributes instead of heavy components).
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Integrate with GSAP for advanced use, but provide CSS/Angular animation fallbacks for small bundles.
+## Build
 
-Prioritize performance (will use the Web Animations API/GSAP and will-change, avoid layout thrashing).
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Theming-friendly, accessible (prefers-reduced-motion support), and tree-shakeable.
+## Running unit tests
 
-Core Concepts
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Directive-based API: maHover, maClick, maAppear, maStagger, maRouterTransition etc.
+## Running end-to-end tests
 
-Animation Presets: Small named presets (e.g., pop, float, slide-up-sm, jiggle) implemented via small params.
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-Composition: Allow chaining / composition of directives or using maSequence service to run sequences.
+## Further help
 
-Config & Theming: Global MicroAnimConfig with default durations, easing, and reduced-motion behavior.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
