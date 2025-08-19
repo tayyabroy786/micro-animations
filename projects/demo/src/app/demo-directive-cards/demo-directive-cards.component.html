@@ -1,0 +1,79 @@
+<!-- 
+  Template for the new component. It contains all the directive demos.
+-->
+<div class="header">
+  <h1>Micro-Animations Demo</h1>
+  <p>A showcase of the <code>maHover</code> directive with various presets.</p>
+</div>
+
+<div class="card-group">
+  <!-- Pop Preset -->
+  <div maHover="pop" class="card">
+    <div class="card-body">
+      <h3>Pop Preset</h3>
+      <p>This button pops on hover. Great for calls to action!</p>
+      <button class="btn btn-primary">Hover me</button>
+    </div>
+  </div>
+
+  <!-- Jiggle Preset -->
+  <div maHover="jiggle" class="card">
+    <div class="card-body">
+      <h3>Jiggle Preset</h3>
+      <p>A subtle jiggle, perfect for indicating an invalid input field.</p>
+      <button class="btn btn-secondary">Hover me</button>
+    </div>
+  </div>
+
+  <!-- Fade Preset -->
+  <div maHover="fade" class="card">
+    <div class="card-body">
+      <h3>Fade Preset</h3>
+      <p>A simple fade effect on hover for a gentle transition.</p>
+      <button class="btn btn-info">Hover me</button>
+    </div>
+  </div>
+</div>
+
+<!-- Add some content to force scrolling -->
+<p class="placeholder-text">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<hr>
+
+<div class="header">
+  <h2>Reveal Animations</h2>
+  <p>Watch these cards animate as they appear in the viewport using <code>maAppear</code>.</p>
+</div>
+
+<!-- The section that uses the maAppear directive with different presets -->
+<div class="card-list">
+  <div *ngFor="let item of items" [maAppear]="item.preset" class="card appear-card">
+    <div class="card-body">
+      <h3>{{ item.title }}</h3>
+      <p>This card animates with the <code>{{ item.preset }}</code> preset.</p>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="header">
+  <h2>Slide In From Right Left</h2>
+  <p>These cards slide into view from the right with a staggered effect.</p>
+</div>
+
+<div class="text-center mb-4">
+  <button class="btn btn-primary" (click)="rerunAnimation()">Run Slide Animation</button>
+</div>
+
+<!-- New section with a different maAppear animation -->
+<div class="card-list" *ngIf="showSlideCards">
+  <div *ngFor="let item of slideItems" [maAppear]="item.preset" class="card appear-card">
+    <div class="card-body">
+      <h3>{{ item.title }}</h3>
+      <p>This card uses a new animation preset.</p>
+    </div>
+  </div>
+</div>

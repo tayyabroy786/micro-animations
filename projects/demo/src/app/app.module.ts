@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DemoAnimButtonComponent } from './demo-anim-button/demo-anim-button.component';
 import { MicroAnimationsModule } from 'micro-animations';
+import { DemoDirectiveCardsComponent } from './demo-directive-cards/demo-directive-cards.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MicroAnimationsModule } from 'micro-animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MicroAnimationsModule 
+    MicroAnimationsModule,
+    DemoDirectiveCardsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
