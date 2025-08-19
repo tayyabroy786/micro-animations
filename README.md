@@ -1,27 +1,57 @@
-# MicroAnimationsWorkspace
+# Micro-Animations Workspace
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+This project is a lightweight and performant Angular library for creating reusable micro-interactions and animations. The demo application showcases the library's core directives and their capabilities.
 
-## Development server
+## What the Demo App Uses
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The demo application, which you can run locally, uses the following technologies:
 
-## Code scaffolding
+* **Angular CLI:** The foundation for the project's development environment.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* **TypeScript:** The primary language for writing the library and component logic.
 
-## Build
+* **Tailwind CSS:** Used for all styling in the demo, replacing custom SCSS files for a more streamlined approach.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Animation List
 
-## Running unit tests
+The demo app showcases the following core animations and their uses:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* **`maHover` Directive:**
 
-## Running end-to-end tests
+    * **`pop` preset:** Makes an element slightly larger on hover, great for buttons.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    * **`jiggle` preset:** Adds a subtle shaking effect, useful for drawing attention to an input field.
 
-## Further help
+    * **`fade` preset:** Creates a gentle fade effect on hover.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* **`maAppear` Directive:**
+
+    * **`slide-up-sm` preset:** A simple animation where elements slide up into view.
+
+    * **`fade` preset:** Elements fade in as they enter the viewport.
+
+    * **`slide-in-left` and `slide-in-right` presets:** New dynamic presets that make elements slide in from the left or right, respectively.
+
+## Installation & Running the Demo
+
+Follow these steps to get the project up and running on your local machine.
+
+### Step 1: Install Dependencies
+
+Open your terminal in the project's root directory and install all the necessary packages.
+
+
+npm install
+
+
+### Step 2: Run the Demo Application
+
+Once the dependencies are installed, you can launch the demo app.
+
+
+ng serve
+
+
+### Step 3: View the App
+
+Open your browser and navigate to `http://localhost:4200/` to see the demo application in action. The app will automatically reload as you change any of the source files.
