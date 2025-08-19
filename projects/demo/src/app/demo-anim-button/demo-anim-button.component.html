@@ -1,1 +1,28 @@
-<p>demo-anim-button works!</p>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+    <!-- Original and pop animations -->
+    <div style="display: flex; gap: 10px;">
+        <button #btnScale class="btn btn-primary" (click)="animateScale()">Scale Button</button>
+        <button #btnPop class="btn btn-primary" (click)="animatePop()">Pop Button</button>
+    </div>
+
+
+    <!-- New daily-use animations -->
+    <div style="display: flex; gap: 10px;">
+        <button #btnShake class="btn btn-secondary" (click)="animateShake()">Shake (Invalid Input)</button>
+        <button #btnPulse class="btn btn-success" (click)="animatePulse()">Pulse (Active/New)</button>
+        <button #btnSlideIn class="btn btn-info" (click)="animateSlideIn()">Slide-In (New Content)</button>
+    </div>
+
+
+
+    <hr style="width: 100%;">
+
+    <!-- New text slide animation -->
+    <div class="width:100px;overflow:hidden;">
+        <button #btnTextSlide class="btn btn-primary" (click)="animateTextSlide()" [disabled]="isProcessing"
+        [style.overflow]="'hidden'">
+        <span style="display: inline-block;">{{ buttonText }}</span>
+    </button>
+    </div>
+
+</div>

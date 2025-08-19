@@ -8,6 +8,15 @@ import {
 
 type MaybeAnimation = Animation | any | null;
 
+export interface AnimOptions {
+  duration?: number;
+  easing?: string;
+  fill?: string;
+  useGsap?: boolean;
+  iterations?: number; 
+   direction?: PlaybackDirection;
+}
+
 @Injectable({ providedIn: 'root' })
 export class AnimService {
   private gsap: any | null = null;
@@ -55,7 +64,7 @@ export class AnimService {
   animate(
     el: Element,
     keyframes: Keyframe[] | PropertyIndexedKeyframes | any,
-    options: { duration?: number; easing?: string; fill?: string; useGsap?: boolean } = {}
+    options: AnimOptions 
   ): Promise<MaybeAnimation> {
     // Respect user OS reduced-motion preference (if config says 'respect')
     if (this.shouldReduceMotion && this.config.respectReducedMotion ) {
@@ -118,8 +127,7 @@ export class AnimService {
         duration,
         easing,
         fill: fillValue,
-        // Use the rest of the options here
-        ...restOfOptions
+        iterations: options.iterations,
       });
       return anim.finished.then(() => anim);
     } catch (err) {

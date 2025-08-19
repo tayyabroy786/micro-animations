@@ -1,0 +1,97 @@
+/* projects/demo/src/app/demo-directive-cards/demo-directive-cards.component.scss */
+/* Styles for the new component */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Card Styling */
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 300px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #e9ecef;
+}
+
+.card-body h3 {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.card-body p {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Bootstrap-like Button Styles */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #0dcaf0;
+}
+
+/* Styles for the appear cards */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.appear-card {
+  /* Set initial opacity to 0 so the animation has a starting point */
+  opacity: 0;
+}
+
+.placeholder-text {
+  max-width: 800px;
+  margin: 60px auto;
+  line-height: 1.6;
+  text-align: justify;
+  color: #555;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 40px 0;
+}
